@@ -34,6 +34,18 @@ for j in range(row,0,-1):
 #Longest substring in alphabetical order is: beggh
 #In the case of ties, print the first substring. For example, if s = 'abcbcd', then your program should print
 #Longest substring in alphabetical order is: abc
+t='azcbobobegghakl'
+longest = t[0]
+current = t[0]
+for c in t[1:]:
+    if c >= current[-1]:
+        current += c
+        if len(current) > len(longest):
+            longest = current
+    else:
+        current = c
+print ("Longest substring in alphabetical order is:", longest)
+
       
       
       
